@@ -1,0 +1,43 @@
+{
+  "expo": {
+    "name": "BillSplit+",
+    "slug": "billsplit-plus",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#6366f1"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.billsplitplus.app"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#6366f1"
+      },
+      "package": "com.billsplitplus.app",
+      "permissions": ["CAMERA", "READ_CONTACTS", "READ_EXTERNAL_STORAGE"]
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Allow BillSplit+ to access your photos to upload bills"
+        }
+      ],
+      [
+        "expo-contacts",
+        {
+          "contactsPermission": "Allow BillSplit+ to access contacts for splitting bills"
+        }
+      ]
+    ]
+  }
+}
