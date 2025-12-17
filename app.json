@@ -25,7 +25,6 @@
       "permissions": ["CAMERA", "READ_CONTACTS", "READ_EXTERNAL_STORAGE"]
     },
     "plugins": [
-      "expo-router",
       [
         "expo-image-picker",
         {
