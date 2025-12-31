@@ -1,7 +1,7 @@
 {
   "name": "billsplit-functions",
   "version": "1.0.0",
-  "description": "Firebase Cloud Functions for BillSplit+",
+  "description": "Firebase Cloud Functions for BillSplit+ (FREE VERSION - Mock implementations)",
   "main": "lib/index.js",
   "scripts": {
     "build": "tsc",
@@ -14,10 +14,7 @@
     "node": "18"
   },
   "dependencies": {
-    "firebase-admin": "^11.11.0",
-    "firebase-functions": "^4.5.0",
-    "@google-cloud/vision": "^4.0.2",
-    "openai": "^4.20.0"
+    "firebase-functions": "^4.5.0"
   },
   "devDependencies": {
     "typescript": "^5.3.3",
