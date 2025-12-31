@@ -1,22 +1,13 @@
-import vision from '@google-cloud/vision';
-
-const client = new vision.ImageAnnotatorClient();
+// Mock OCR service for FREE version
+// This avoids requiring Google Cloud Vision API
 
 export async function extractBillDataWithVision(imageUrl: string): Promise<string> {
-  try {
-    const [result] = await client.textDetection(imageUrl);
-    const detections = result.textAnnotations;
-
-    if (!detections || detections.length === 0) {
-      throw new Error('No text detected in image');
-    }
-
-    // First annotation contains all text
-    const fullText = detections[0].description || '';
-    
-    return fullText;
-  } catch (error: any) {
-    console.error('Vision API error:', error);
-    throw new Error(`OCR failed: ${error.message}`);
-  }
+  // Mock OCR - returns empty text
+  // In production, you could use free alternatives like:
+  // - Tesseract.js (client-side OCR)
+  // - Manual text input
+  // - Free OCR APIs with limits
+  
+  console.log('Mock OCR called for:', imageUrl);
+  return 'Mock OCR text extraction disabled in free version';
 }
